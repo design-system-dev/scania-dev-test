@@ -1,0 +1,25 @@
+{
+  "name": "scania-dev-test",
+  "version": "0.0.1",
+  "description": "Solving the Dev Test of Scanias interview process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/design-system-dev/scania-dev-test.git"
+  },
+  "keywords": [
+    "scania",
+    "design system",
+    "components",
+    "design tokens",
+    "stenciljs"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/design-system-dev/scania-dev-test/issues"
+  },
+  "homepage": "https://github.com/design-system-dev/scania-dev-test#readme"
+}
