@@ -1,29 +1,33 @@
 {
-  "name": "scania-dev-test",
-  "packageManager": "yarn@3.2.3",
-  "version": "0.0.1",
-  "workspaces": [
-    "packages/*"
-  ],
-  "description": "Solving the Dev Test of Scanias interview process",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/design-system-dev/scania-dev-test.git"
-  },
-  "keywords": [
-    "scania",
-    "design system",
-    "components",
-    "design tokens",
-    "stenciljs"
-  ],
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/design-system-dev/scania-dev-test/issues"
-  },
-  "homepage": "https://github.com/design-system-dev/scania-dev-test#readme"
+    "name": "scania-dev-test",
+    "packageManager": "yarn@3.2.3",
+    "version": "0.0.1",
+    "workspaces": [
+        "packages/*"
+    ],
+    "description": "Solving the Dev Test of Scanias interview process",
+    "main": "index.js",
+    "scripts": {
+        "prettier:check": "prettier --ignore-path .gitignore .",
+        "prettier:fix": "prettier --write --ignore-path .gitignore ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/design-system-dev/scania-dev-test.git"
+    },
+    "keywords": [
+        "scania",
+        "design system",
+        "components",
+        "design tokens",
+        "stenciljs"
+    ],
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/design-system-dev/scania-dev-test/issues"
+    },
+    "homepage": "https://github.com/design-system-dev/scania-dev-test#readme",
+    "devDependencies": {
+        "prettier": "^2.7.1"
+    }
 }
