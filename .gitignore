@@ -1,6 +1,10 @@
-node_modules
-dist
-.vscode
+node_modules/
+dist/
+www/
+loader/
+.stencil/
+.vscode/
+.DS_Store
 
 # Yarn
 .pnp.*
