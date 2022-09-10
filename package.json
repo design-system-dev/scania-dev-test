@@ -1,5 +1,6 @@
 {
   "name": "scania-dev-test",
+  "packageManager": "yarn@3.2.3",
   "version": "0.0.1",
   "description": "Solving the Dev Test of Scanias interview process",
   "main": "index.js",
@@ -23,3 +24,4 @@
   },
   "homepage": "https://github.com/design-system-dev/scania-dev-test#readme"
 }
+
