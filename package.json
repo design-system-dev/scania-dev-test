@@ -8,6 +8,8 @@
     "description": "Solving the Dev Test of Scanias interview process",
     "main": "index.js",
     "scripts": {
+        "eslint:check": "eslint . --ext .js",
+        "eslint:fix": "yarn eslint:check --fix",
         "prettier:check": "prettier --ignore-path .gitignore .",
         "prettier:fix": "prettier --write --ignore-path .gitignore ."
     },
@@ -28,6 +30,9 @@
     },
     "homepage": "https://github.com/design-system-dev/scania-dev-test#readme",
     "devDependencies": {
+        "eslint": "^8.23.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
         "prettier": "^2.7.1"
     }
 }
