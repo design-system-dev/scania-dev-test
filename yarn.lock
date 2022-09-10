@@ -4,6 +4,20 @@
 __metadata:
   version: 6
 
+"pack-a@1.0.0, pack-a@workspace:packages/pack-a":
+  version: 0.0.0-use.local
+  resolution: "pack-a@workspace:packages/pack-a"
+  languageName: unknown
+  linkType: soft
+
+"pack-b@workspace:packages/pack-b":
+  version: 0.0.0-use.local
+  resolution: "pack-b@workspace:packages/pack-b"
+  dependencies:
+    pack-a: 1.0.0
+  languageName: unknown
+  linkType: soft
+
 "scania-dev-test@workspace:.":
   version: 0.0.0-use.local
   resolution: "scania-dev-test@workspace:."
