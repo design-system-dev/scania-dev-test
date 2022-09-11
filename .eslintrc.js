@@ -17,10 +17,10 @@ module.exports = {
     },
     overrides: [
         {
-            files: ['packages/components/**/*.{ts,tsx}'],
+            files: ['**/*.{ts,tsx}'],
             extends: ['plugin:@stencil/recommended', 'prettier'],
             parserOptions: {
-                project: ['packages/components/tsconfig.json'],
+                project: ['tsconfig.json'],
             },
         },
         {
