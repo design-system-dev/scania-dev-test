@@ -10,7 +10,8 @@
     "scripts": {
         "all:build": "yarn workspaces foreach run build",
         "all:dev": "yarn workspaces foreach run dev",
-        "eslint:check": "eslint . --ext .js",
+        "all:test": "yarn workspaces foreach run test",
+        "eslint:check": "eslint . --ext .js,.ts,.tsx --ignore-path .gitignore",
         "eslint:fix": "yarn eslint:check --fix",
         "prettier:check": "prettier --ignore-path .gitignore .",
         "prettier:fix": "prettier --write --ignore-path .gitignore ."
@@ -32,9 +33,15 @@
     },
     "homepage": "https://github.com/design-system-dev/scania-dev-test#readme",
     "devDependencies": {
-        "eslint": "^8.23.0",
+        "@stencil/eslint-plugin": "^0.4.0",
+        "@typescript-eslint/eslint-plugin": "^4",
+        "@typescript-eslint/parser": "^4",
+        "eslint": "^7",
         "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-jest": "^27.0.4",
         "eslint-plugin-prettier": "^4.2.1",
-        "prettier": "^2.7.1"
+        "eslint-plugin-react": "^7.31.8",
+        "prettier": "^2.7.1",
+        "typescript": "4.4.4"
     }
 }
