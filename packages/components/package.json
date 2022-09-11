@@ -19,18 +19,31 @@
     ],
     "scripts": {
         "build": "stencil build --docs",
-        "dev": "stencil build --dev --watch --serve",
+        "dev": "stencil build --watch",
         "test": "stencil test --spec --e2e",
         "test.watch": "stencil test --spec --e2e --watchAll",
-        "generate": "stencil generate"
+        "generate": "stencil generate",
+        "storybook:build": "build-storybook",
+        "storybook:dev": "start-storybook -p 6006"
     },
     "dependencies": {
         "@stencil/core": "^2.13.0"
     },
     "devDependencies": {
+        "@babel/core": "^7.19.0",
+        "@mdx-js/react": "^1.6.22",
+        "@storybook/addon-actions": "^6.5.10",
+        "@storybook/addon-docs": "^6.5.10",
+        "@storybook/addon-essentials": "^6.5.10",
+        "@storybook/addon-links": "^6.5.10",
+        "@storybook/builder-webpack4": "^6.5.10",
+        "@storybook/manager-webpack4": "^6.5.10",
+        "@storybook/web-components": "^6.5.10",
         "@types/jest": "^27.0.3",
+        "babel-loader": "^8.2.5",
         "jest": "^27.4.5",
         "jest-cli": "^27.4.5",
+        "lit-html": "^2.3.1",
         "puppeteer": "^10.0.0"
     },
     "license": "MIT"
