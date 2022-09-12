@@ -1,0 +1,9 @@
+.table {
+    overflow-x: auto;
+    max-width: 100%;
+    display: inline-block;
+
+    &.full {
+        display: block;
+    }
+}

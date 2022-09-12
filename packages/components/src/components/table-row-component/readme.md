@@ -16,6 +16,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [table-component](../table-component)
+
 ### Depends on
 
 - [text-component](../text-component)
@@ -24,6 +28,7 @@
 ```mermaid
 graph TD;
   table-row-component --> text-component
+  table-component --> table-row-component
   style table-row-component fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

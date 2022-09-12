@@ -4,6 +4,9 @@ import { html } from 'lit-html';
 
 export default {
     title: 'table-row-component',
+    argTypes: {
+        size: { control: { type: 'select', options: ['shrink', 'full'] } },
+    },
     decorators: [
         story =>
             html`<table style="width: 100%;">
