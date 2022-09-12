@@ -19,7 +19,7 @@
 
 ### Used by
 
- - [table-row-component](../table-component)
+ - [table-row-component](../table-row-component)
 
 ### Graph
 ```mermaid
