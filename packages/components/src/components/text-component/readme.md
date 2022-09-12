@@ -15,6 +15,19 @@
 | `theme`      | `theme`      | Whether the text will have dark or light colors | `"dark" \| "light"`                | `'dark'`      |
 
 
+## Dependencies
+
+### Used by
+
+ - [table-row-component](../table-component)
+
+### Graph
+```mermaid
+graph TD;
+  table-row-component --> text-component
+  style text-component fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

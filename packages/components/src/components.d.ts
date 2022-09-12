@@ -6,6 +6,16 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface TableRowComponent {
+        /**
+          * Cell contents
+         */
+        "cells": Array<string>;
+        /**
+          * Whether to render a header row or standard row
+         */
+        "isHeader": boolean;
+    }
     interface TextComponent {
         /**
           * Determines the appearance of the text
@@ -26,6 +36,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLTableRowComponentElement extends Components.TableRowComponent, HTMLStencilElement {
+    }
+    var HTMLTableRowComponentElement: {
+        prototype: HTMLTableRowComponentElement;
+        new (): HTMLTableRowComponentElement;
+    };
     interface HTMLTextComponentElement extends Components.TextComponent, HTMLStencilElement {
     }
     var HTMLTextComponentElement: {
@@ -33,10 +49,21 @@ declare global {
         new (): HTMLTextComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "table-row-component": HTMLTableRowComponentElement;
         "text-component": HTMLTextComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface TableRowComponent {
+        /**
+          * Cell contents
+         */
+        "cells": Array<string>;
+        /**
+          * Whether to render a header row or standard row
+         */
+        "isHeader"?: boolean;
+    }
     interface TextComponent {
         /**
           * Determines the appearance of the text
@@ -56,6 +83,7 @@ declare namespace LocalJSX {
         "theme"?: 'dark' | 'light';
     }
     interface IntrinsicElements {
+        "table-row-component": TableRowComponent;
         "text-component": TextComponent;
     }
 }
@@ -63,6 +91,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "table-row-component": LocalJSX.TableRowComponent & JSXBase.HTMLAttributes<HTMLTableRowComponentElement>;
             "text-component": LocalJSX.TextComponent & JSXBase.HTMLAttributes<HTMLTextComponentElement>;
         }
     }
