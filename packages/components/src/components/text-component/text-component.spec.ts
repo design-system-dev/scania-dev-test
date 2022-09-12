@@ -10,7 +10,7 @@ describe('text-component', () => {
 
         expect(root).toEqualHtml(`
           <text-component>
-            <p class="theme-dark style-paragraph size-m">
+            <p class="text theme-dark style-paragraph size-m">
               Hello, World!
             </p>
           </text-component>
@@ -25,7 +25,7 @@ describe('text-component', () => {
 
         expect(root).toEqualHtml(`
           <text-component tag="h1">
-            <h1 class="theme-dark style-paragraph size-m">
+            <h1 class="text theme-dark style-paragraph size-m">
             Hello, World!
             </h1>
           </text-component>
@@ -40,7 +40,7 @@ describe('text-component', () => {
 
         expect(root).toEqualHtml(`
           <text-component size="s">
-            <p class="theme-dark style-paragraph size-s">
+            <p class="text theme-dark style-paragraph size-s">
             Hello, World!
             </p>
           </text-component>
@@ -55,7 +55,7 @@ describe('text-component', () => {
 
         expect(root).toEqualHtml(`
           <text-component theme="light">
-            <p class="theme-light style-paragraph size-m">
+            <p class="text theme-light style-paragraph size-m">
             Hello, World!
             </p>
           </text-component>
@@ -70,7 +70,7 @@ describe('text-component', () => {
 
         expect(root).toEqualHtml(`
           <text-component appearance="title">
-            <p class="theme-dark style-title size-m">
+            <p class="text theme-dark style-title size-m">
             Hello, World!
             </p>
           </text-component>

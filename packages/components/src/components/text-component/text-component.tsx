@@ -3,6 +3,7 @@ import { Component, Prop, h } from '@stencil/core';
 @Component({
     tag: 'text-component',
     styleUrl: './text-component.scss',
+    scoped: true,
 })
 export class TextComponent {
     /** Whether the text will have dark or light colors */
@@ -19,6 +20,7 @@ export class TextComponent {
 
     render() {
         const classNames = [
+            'text',
             `theme-${this.theme}`,
             `style-${this.appearance}`,
             `size-${this.size}`,
