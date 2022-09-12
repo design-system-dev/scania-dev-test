@@ -26,11 +26,11 @@ export class TableRowComponent {
     @Prop() isHeader: boolean = false;
 
     /**
-     * 'fixed-cells' will cause each cell to take a fixed value,
+     * 'shrink' will cause each cell to take a fixed value,
      * while 'full' will cause the row to fill up all available space,
      * distributing it evenly among cells.
      */
-    @Prop() size: 'fixed-cells' | 'full' = 'fixed-cells';
+    @Prop() size: 'shrink' | 'full' = 'shrink';
 
     render() {
         const rowClasses = [

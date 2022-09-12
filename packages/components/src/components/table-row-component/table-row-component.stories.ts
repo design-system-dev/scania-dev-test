@@ -34,10 +34,10 @@ Header.args = {
     isHeader: true,
 };
 
-export const SizeFixedCells = Template.bind({});
-SizeFixedCells.args = {
+export const SizeShrink = Template.bind({});
+SizeShrink.args = {
     ...Standard.args,
-    size: 'fixed-cells',
+    size: 'shrink',
 };
 
 export const SizeFull = Template.bind({});
