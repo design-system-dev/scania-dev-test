@@ -11315,20 +11315,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pack-a@1.0.0, pack-a@workspace:packages/pack-a":
-  version: 0.0.0-use.local
-  resolution: "pack-a@workspace:packages/pack-a"
-  languageName: unknown
-  linkType: soft
-
-"pack-b@workspace:packages/pack-b":
-  version: 0.0.0-use.local
-  resolution: "pack-b@workspace:packages/pack-b"
-  dependencies:
-    pack-a: 1.0.0
-  languageName: unknown
-  linkType: soft
-
 "pako@npm:~1.0.5":
   version: 1.0.11
   resolution: "pako@npm:1.0.11"
