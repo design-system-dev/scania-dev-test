@@ -12,7 +12,7 @@ describe('table-row-component', () => {
         });
 
         expect(root.outerHTML).toMatch(
-            /<table-row-component><tr class="row standard"><td class="cell"><text-component appearance="paragraph" size="s">a<\/text-component>/
+            /<table-row-component><tr class="row standard fixed-cells"><td class="cell"><text-component appearance="paragraph" size="s">a<\/text-component>/
         );
     });
 
@@ -28,7 +28,7 @@ describe('table-row-component', () => {
         });
 
         expect(root.outerHTML).toMatch(
-            /<table-row-component><tr class="row header"><th class="cell"><text-component appearance="title" size="s">a<\/text-component>/
+            /<table-row-component><tr class="row header fixed-cells"><th class="cell"><text-component appearance="title" size="s">a<\/text-component>/
         );
     });
 });
