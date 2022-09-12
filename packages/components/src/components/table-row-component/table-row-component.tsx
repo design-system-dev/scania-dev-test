@@ -25,10 +25,19 @@ export class TableRowComponent {
     /** Whether to render a header row or standard row */
     @Prop() isHeader: boolean = false;
 
+    /**
+     * 'fixed-cells' will cause each cell to take a fixed value,
+     * while 'full' will cause the row to fill up all available space,
+     * distributing it evenly among cells.
+     */
+    @Prop() size: 'fixed-cells' | 'full' = 'fixed-cells';
+
     render() {
-        const rowClasses = ['row', this.isHeader ? 'header' : 'standard'].join(
-            ' '
-        );
+        const rowClasses = [
+            'row',
+            this.isHeader ? 'header' : 'standard',
+            this.size,
+        ].join(' ');
         const CellTag = this.isHeader ? 'th' : 'td';
         const textAppearance = this.isHeader ? 'title' : 'paragraph';
 

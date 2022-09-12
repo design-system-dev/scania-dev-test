@@ -1,8 +1,16 @@
 .row {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 12rem;
     grid-template-rows: 1fr;
+
+    &.fixed-cells {
+        grid-auto-columns: 12rem;
+    }
+
+    &.full {
+        width: 100%;
+        grid-auto-columns: 1fr;
+    }
 }
 
 .cell {
