@@ -2099,6 +2099,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stencil/sass@npm:^1.5.2":
+  version: 1.5.2
+  resolution: "@stencil/sass@npm:1.5.2"
+  peerDependencies:
+    "@stencil/core": ">=1.0.2"
+  checksum: fc4250eb31351f24c4f59829be2f8f57b81a4c6b5af395f8325e0eb13fe749334c6fbda7edfa250831d50419ba8c111b8fc31b81e2f176d251648dffbdf2cb49
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-actions@npm:6.5.10, @storybook/addon-actions@npm:^6.5.10":
   version: 6.5.10
   resolution: "@storybook/addon-actions@npm:6.5.10"
@@ -5616,6 +5625,7 @@ __metadata:
     "@babel/core": ^7.19.0
     "@mdx-js/react": ^1.6.22
     "@stencil/core": ^2.13.0
+    "@stencil/sass": ^1.5.2
     "@storybook/addon-actions": ^6.5.10
     "@storybook/addon-docs": ^6.5.10
     "@storybook/addon-essentials": ^6.5.10

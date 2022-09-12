@@ -20,8 +20,8 @@
     "scripts": {
         "build": "stencil build --docs",
         "dev": "stencil build --watch",
-        "test": "stencil test --spec --e2e",
-        "test.watch": "stencil test --spec --e2e --watchAll",
+        "test": "stencil test --spec",
+        "test:watch": "stencil test --spec --watchAll",
         "generate": "stencil generate",
         "storybook:build": "build-storybook",
         "storybook:dev": "start-storybook -p 6006"

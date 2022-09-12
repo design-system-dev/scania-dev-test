@@ -1,0 +1,57 @@
+:root {
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.size-s {
+    font-size: var(--font-size-s);
+    line-height: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.size-m {
+    font-size: var(--font-size-m);
+    line-height: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.size-l {
+    font-size: var(--font-size-l);
+    line-height: 1.5rem;
+    letter-spacing: -0.04em;
+}
+
+.style-title {
+    font-weight: 700;
+}
+
+.style-link {
+    text-decoration: underline;
+}
+
+.theme-dark {
+    &.style-title {
+        color: var(--color-blue-900);
+    }
+
+    &.style-paragraph {
+        color: var(--color-gray-900);
+    }
+
+    &.style-link {
+        color: var(--color-blue-600);
+    }
+}
+
+.theme-light {
+    &.style-title {
+        color: var(--color-white);
+    }
+
+    &.style-paragraph {
+        color: var(--color-gray-100);
+    }
+
+    &.style-link {
+        color: var(--color-blue-200);
+    }
+}

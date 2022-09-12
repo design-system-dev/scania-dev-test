@@ -20,6 +20,24 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface TextComponent {
+        /**
+          * Determines the appearance of the text
+         */
+        "appearance": 'title' | 'paragraph' | 'link';
+        /**
+          * Determines the font size
+         */
+        "size": 's' | 'm' | 'l';
+        /**
+          * HTML tag to render as
+         */
+        "tag": string;
+        /**
+          * Whether the text will have dark or light colors
+         */
+        "theme": 'dark' | 'light';
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +46,15 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLTextComponentElement extends Components.TextComponent, HTMLStencilElement {
+    }
+    var HTMLTextComponentElement: {
+        prototype: HTMLTextComponentElement;
+        new (): HTMLTextComponentElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "text-component": HTMLTextComponentElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +72,27 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface TextComponent {
+        /**
+          * Determines the appearance of the text
+         */
+        "appearance"?: 'title' | 'paragraph' | 'link';
+        /**
+          * Determines the font size
+         */
+        "size"?: 's' | 'm' | 'l';
+        /**
+          * HTML tag to render as
+         */
+        "tag"?: string;
+        /**
+          * Whether the text will have dark or light colors
+         */
+        "theme"?: 'dark' | 'light';
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "text-component": TextComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +100,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "text-component": LocalJSX.TextComponent & JSXBase.HTMLAttributes<HTMLTextComponentElement>;
         }
     }
 }

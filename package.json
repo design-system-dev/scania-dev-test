@@ -11,6 +11,7 @@
         "all:build": "yarn workspaces foreach run build",
         "all:dev": "yarn workspaces foreach run dev",
         "all:test": "yarn workspaces foreach run test",
+        "all:test:watch": "yarn workspaces foreach run test:watch",
         "eslint:check": "eslint . --ext .js,.ts,.tsx --ignore-path .gitignore",
         "eslint:fix": "yarn eslint:check --fix",
         "prettier:check": "prettier --ignore-path .gitignore .",
