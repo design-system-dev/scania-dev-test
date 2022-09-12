@@ -18,7 +18,7 @@ export class TableComponent {
      */
     @Prop() size: 'shrink' | 'full' = 'shrink';
 
-    /** Rows of cell contents */
+    /** Message to display if `rows` is empty */
     @Prop() emptyMessage: string = 'No entries found.';
 
     render() {

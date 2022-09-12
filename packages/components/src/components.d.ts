@@ -8,7 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface TableComponent {
         /**
-          * Rows of cell contents
+          * Message to display if `rows` is empty
          */
         "emptyMessage": string;
         /**
@@ -85,7 +85,7 @@ declare global {
 declare namespace LocalJSX {
     interface TableComponent {
         /**
-          * Rows of cell contents
+          * Message to display if `rows` is empty
          */
         "emptyMessage"?: string;
         /**

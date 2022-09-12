@@ -9,7 +9,7 @@
 
 | Property                 | Attribute       | Description                                                                                                              | Type                 | Default               |
 | ------------------------ | --------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------- | --------------------- |
-| `emptyMessage`           | `empty-message` | Rows of cell contents                                                                                                    | `string`             | `'No entries found.'` |
+| `emptyMessage`           | `empty-message` | Message to display if `rows` is empty                                                                                    | `string`             | `'No entries found.'` |
 | `headerRow` _(required)_ | --              | Header cell contents                                                                                                     | `string[]`           | `undefined`           |
 | `rows`                   | --              | Rows of cell contents                                                                                                    | `string[][]`         | `undefined`           |
 | `size`                   | `size`          | 'shrink' will cause the table to shrink to the size of its children rows, while 'full' will fill up all available space. | `"full" \| "shrink"` | `'shrink'`            |
