@@ -6,6 +6,19 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface DropdownComponent {
+        /**
+          * Title
+         */
+        "heading": string;
+        /**
+          * List of dropdown options
+         */
+        "options": {
+        label: string;
+        value: string;
+    }[];
+    }
     interface TableComponent {
         /**
           * Message to display if `rows` is empty
@@ -58,6 +71,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLDropdownComponentElement extends Components.DropdownComponent, HTMLStencilElement {
+    }
+    var HTMLDropdownComponentElement: {
+        prototype: HTMLDropdownComponentElement;
+        new (): HTMLDropdownComponentElement;
+    };
     interface HTMLTableComponentElement extends Components.TableComponent, HTMLStencilElement {
     }
     var HTMLTableComponentElement: {
@@ -77,12 +96,26 @@ declare global {
         new (): HTMLTextComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "dropdown-component": HTMLDropdownComponentElement;
         "table-component": HTMLTableComponentElement;
         "table-row-component": HTMLTableRowComponentElement;
         "text-component": HTMLTextComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface DropdownComponent {
+        /**
+          * Title
+         */
+        "heading"?: string;
+        /**
+          * List of dropdown options
+         */
+        "options": {
+        label: string;
+        value: string;
+    }[];
+    }
     interface TableComponent {
         /**
           * Message to display if `rows` is empty
@@ -134,6 +167,7 @@ declare namespace LocalJSX {
         "theme"?: 'dark' | 'light';
     }
     interface IntrinsicElements {
+        "dropdown-component": DropdownComponent;
         "table-component": TableComponent;
         "table-row-component": TableRowComponent;
         "text-component": TextComponent;
@@ -143,6 +177,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "dropdown-component": LocalJSX.DropdownComponent & JSXBase.HTMLAttributes<HTMLDropdownComponentElement>;
             "table-component": LocalJSX.TableComponent & JSXBase.HTMLAttributes<HTMLTableComponentElement>;
             "table-row-component": LocalJSX.TableRowComponent & JSXBase.HTMLAttributes<HTMLTableRowComponentElement>;
             "text-component": LocalJSX.TextComponent & JSXBase.HTMLAttributes<HTMLTextComponentElement>;

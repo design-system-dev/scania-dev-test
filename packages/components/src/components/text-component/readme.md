@@ -19,11 +19,13 @@
 
 ### Used by
 
+ - [dropdown-component](../dropdown-component)
  - [table-row-component](../table-row-component)
 
 ### Graph
 ```mermaid
 graph TD;
+  dropdown-component --> text-component
   table-row-component --> text-component
   style text-component fill:#f9f,stroke:#333,stroke-width:4px
 ```

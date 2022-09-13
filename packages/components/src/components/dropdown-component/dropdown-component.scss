@@ -1,0 +1,4 @@
+.option * {
+    // prevent selecting, clicking etc the contents of the option:
+    pointer-events: none;
+}
