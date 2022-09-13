@@ -1,13 +1,12 @@
-import { Component, Prop, State, h } from '@stencil/core';
+import { Component, Prop, State, Watch, h } from '@stencil/core';
 
 /**
  * TODO:
  *
- * [ ] basic component
+ * [x] basic component
  * [ ] styles
  * [ ] stories
  * [ ] tests
- * [ ] data binding
  * [ ] reflect in real select
  *
  */
@@ -29,36 +28,67 @@ export class DropdownComponent {
 
     @State() selectedValue: string;
 
+    @State() selectedLabel: string = '';
+
+    @State() isOpen: boolean = false;
+
+    @Watch('selectedValue')
+    watchStateHandler(newValue: string) {
+        this.selectedLabel = this.getOptionLabelByValue(newValue);
+    }
+
+    private toggleIsOpen = () => {
+        this.isOpen = !this.isOpen;
+    };
+
+    private getOptionLabelByValue = value => {
+        const option = this.options.find(option => option.value === value);
+        if (option === undefined) {
+            return '';
+        }
+        return option.label;
+    };
+
     private handleOptionClick = e => {
         const targetValue = e.target.getAttribute('data-value');
-
         if (targetValue) {
             this.selectedValue = targetValue;
         }
+        this.isOpen = false;
     };
 
     render() {
+        const dropdownClasses = [
+            'dropdown',
+            this.isOpen ? 'open' : 'closed',
+        ].join(' ');
+        const headerText =
+            this.selectedLabel.length > 0 ? this.selectedLabel : this.heading;
+
         return (
-            <div class="dropdown">
-                <div class="option header">
-                    <text-component size="s">{this.heading}</text-component>
-                </div>
+            <div class={dropdownClasses}>
+                <button class="option header" onClick={this.toggleIsOpen}>
+                    <text-component size="s">{headerText}</text-component>
+                    <div class="caret">v</div>
+                </button>
 
-                {this.options.map(option => (
-                    <button
-                        class="option"
-                        data-value={option.value}
-                        onClick={this.handleOptionClick}
-                    >
-                        <text-component size="s">{option.label}</text-component>
-                    </button>
-                ))}
-
-                <div>
-                    <text-component size="m" appearance="link">
-                        Selected: {this.selectedValue}
-                    </text-component>
-                </div>
+                {this.isOpen && (
+                    <ul class="options-list">
+                        <li>
+                            {this.options.map(option => (
+                                <button
+                                    class="option"
+                                    data-value={option.value}
+                                    onClick={this.handleOptionClick}
+                                >
+                                    <text-component size="s">
+                                        {option.label}
+                                    </text-component>
+                                </button>
+                            ))}
+                        </li>
+                    </ul>
+                )}
             </div>
         );
     }
