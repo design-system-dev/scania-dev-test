@@ -24,5 +24,5 @@ Standard.args = {
 export const CustomHeading = Template.bind({});
 CustomHeading.args = {
     ...Standard.args,
-    heading: 'Favorite Design System',
+    heading: 'Best Design System',
 };

@@ -67,26 +67,34 @@ export class DropdownComponent {
 
         return (
             <div class={dropdownClasses}>
-                <button class="option header" onClick={this.toggleIsOpen}>
+                <button class="header" onClick={this.toggleIsOpen}>
                     <text-component size="s">{headerText}</text-component>
                     <div class="caret">v</div>
                 </button>
 
                 {this.isOpen && (
                     <ul class="options-list">
-                        <li>
-                            {this.options.map(option => (
-                                <button
-                                    class="option"
-                                    data-value={option.value}
-                                    onClick={this.handleOptionClick}
-                                >
-                                    <text-component size="s">
-                                        {option.label}
-                                    </text-component>
-                                </button>
-                            ))}
-                        </li>
+                        {this.options.map(option => {
+                            const isActive =
+                                this.selectedValue === option.value;
+                            const optionClasses = [
+                                'option',
+                                isActive ? 'active' : '',
+                            ].join(' ');
+                            return (
+                                <li>
+                                    <button
+                                        class={optionClasses}
+                                        data-value={option.value}
+                                        onClick={this.handleOptionClick}
+                                    >
+                                        <text-component size="s">
+                                            {option.label}
+                                        </text-component>
+                                    </button>
+                                </li>
+                            );
+                        })}
                     </ul>
                 )}
             </div>
