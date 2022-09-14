@@ -33,6 +33,14 @@ const config = {
                         selector: ':root, ::before, ::after, ::marker',
                     },
                 },
+                {
+                    destination: join(__dirname, 'dist/tokens.scss'),
+                    format: 'scss/variables',
+                    options: {
+                        outputReferences: true,
+                        showFileHeader: false,
+                    },
+                },
             ],
         },
     },
