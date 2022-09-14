@@ -13,6 +13,13 @@
 | `options` _(required)_ | --        | List of dropdown options | `{ label: string; value: string; }[]` | `undefined`   |
 
 
+## Events
+
+| Event             | Description                                     | Type               |
+| ----------------- | ----------------------------------------------- | ------------------ |
+| `dropdownChanged` | Emitts new value whenever an option is selected | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

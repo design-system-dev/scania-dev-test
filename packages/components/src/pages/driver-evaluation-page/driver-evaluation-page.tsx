@@ -1,4 +1,11 @@
-import { Component, h, getAssetPath } from '@stencil/core';
+import {
+    Component,
+    State,
+    Watch,
+    Listen,
+    h,
+    getAssetPath,
+} from '@stencil/core';
 import driversData from './drivers.json';
 
 @Component({
@@ -7,18 +14,49 @@ import driversData from './drivers.json';
     scoped: true,
 })
 export class DriverEvaluationPage {
-    private formateDistance(distance) {
-        return `${Number(distance).toLocaleString()} km`;
+    @State() filteredDrivers = driversData;
+
+    @State() formattedDrivers = this.formateDrivers(this.filteredDrivers);
+
+    @State() selectedFilter: string;
+
+    @Listen('dropdownChanged')
+    dropdownChangedHandler({ detail: selectedFilter }) {
+        this.selectedFilter = selectedFilter;
     }
 
-    render() {
-        const filteredDrivers = driversData.map(item => [
+    @Watch('selectedFilter')
+    watchselectedFilterHandler() {
+        this.filterDriversByDistance();
+    }
+
+    @Watch('filteredDrivers')
+    watchFilteredDriversHandler(newValue) {
+        this.formattedDrivers = this.formateDrivers(newValue);
+    }
+
+    private filterDriversByDistance = () => {
+        const longDrivers = driversData.filter(item => item.distance > 200000);
+        this.filteredDrivers =
+            this.selectedFilter === 'long'
+                ? longDrivers
+                : driversData.filter(item => !longDrivers.includes(item));
+    };
+
+    private formateDrivers(drivers) {
+        return drivers.map(item => [
             item.driver,
             item.company,
             this.formateDistance(item.distance),
             item.score,
         ]);
+    }
 
+    private formateDistance(distance) {
+        return `${Number(distance).toLocaleString()} km`;
+    }
+
+    render() {
         return (
             <main class="page">
                 <nav class="nav">
@@ -74,7 +112,7 @@ export class DriverEvaluationPage {
                                     'Distance',
                                     'Score',
                                 ]}
-                                rows={filteredDrivers}
+                                rows={this.formattedDrivers}
                                 emptyMessage="No drivers found."
                             ></table-component>
                         </div>

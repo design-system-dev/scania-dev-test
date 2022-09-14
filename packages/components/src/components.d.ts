@@ -72,6 +72,10 @@ export namespace Components {
         "theme": 'dark' | 'light';
     }
 }
+export interface DropdownComponentCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDropdownComponentElement;
+}
 declare global {
     interface HTMLDriverEvaluationPageElement extends Components.DriverEvaluationPage, HTMLStencilElement {
     }
@@ -119,6 +123,10 @@ declare namespace LocalJSX {
           * Title
          */
         "heading"?: string;
+        /**
+          * Emitts new value whenever an option is selected
+         */
+        "onDropdownChanged"?: (event: DropdownComponentCustomEvent<any>) => void;
         /**
           * List of dropdown options
          */

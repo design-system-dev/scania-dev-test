@@ -1,4 +1,13 @@
-import { Component, Prop, State, Watch, h, getAssetPath } from '@stencil/core';
+import {
+    Component,
+    Prop,
+    State,
+    Watch,
+    Event,
+    EventEmitter,
+    h,
+    getAssetPath,
+} from '@stencil/core';
 
 @Component({
     tag: 'dropdown-component',
@@ -15,6 +24,9 @@ export class DropdownComponent {
         value: string;
     }[];
 
+    /** Emitts new value whenever an option is selected */
+    @Event() dropdownChanged: EventEmitter;
+
     @State() selectedValue: string;
 
     @State() selectedLabel: string = '';
@@ -24,6 +36,7 @@ export class DropdownComponent {
     @Watch('selectedValue')
     watchStateHandler(newValue: string) {
         this.selectedLabel = this.getOptionLabelByValue(newValue);
+        this.dropdownChanged.emit(this.selectedValue);
     }
 
     private toggleIsOpen = () => {
