@@ -6,7 +6,7 @@ import { Component, Prop, State, Watch, h, getAssetPath } from '@stencil/core';
  * [x] basic component
  * [x] styles
  * [x] stories
- * [ ] tests
+ * [x] tests
  * [ ] reflect in real select
  *
  */
