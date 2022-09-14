@@ -2569,15 +2569,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stencil/react-output-target@npm:^0.3.1":
-  version: 0.3.1
-  resolution: "@stencil/react-output-target@npm:0.3.1"
-  peerDependencies:
-    "@stencil/core": ^2.9.0
-  checksum: fe311ba81f79119598524ceedf7125ff77bba22999b7394de774231262e5b7be28d5c46f6e05df1cde8947e24b03ccac797aa725738aa7bb6912536277b61d79
-  languageName: node
-  linkType: hard
-
 "@stencil/sass@npm:^1.5.2":
   version: 1.5.2
   resolution: "@stencil/sass@npm:1.5.2"
@@ -7012,7 +7003,6 @@ __metadata:
     "@babel/core": ^7.19.0
     "@mdx-js/react": ^1.6.22
     "@stencil/core": ^2.13.0
-    "@stencil/react-output-target": ^0.3.1
     "@stencil/sass": ^1.5.2
     "@storybook/addon-actions": ^6.5.10
     "@storybook/addon-docs": ^6.5.10

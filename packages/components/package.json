@@ -27,7 +27,8 @@
         "storybook:dev": "start-storybook -p 6006"
     },
     "dependencies": {
-        "@stencil/core": "^2.13.0"
+        "@stencil/core": "^2.13.0",
+        "design-tokens": "1.0.0"
     },
     "devDependencies": {
         "@babel/core": "^7.19.0",
