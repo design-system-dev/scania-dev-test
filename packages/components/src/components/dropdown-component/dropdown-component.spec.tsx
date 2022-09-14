@@ -35,4 +35,22 @@ describe('table-component', () => {
         await page.waitForChanges();
         expect(root.outerHTML).toMatch(/<ul class="options-list">/);
     });
+
+    it('hidden select field updates value', async () => {
+        // open dropdown
+        root.querySelector('button.header').click();
+        await page.waitForChanges();
+
+        // select a dropdown option
+        const targetDropdownOption = root.querySelector('button.option');
+        targetDropdownOption.click();
+        await page.waitForChanges();
+
+        // assert that hidden select has the same option selected
+        const selectedValue = targetDropdownOption.getAttribute('data-value');
+        const targetSelectOption = root.querySelector(
+            `option[value="${selectedValue}"]`
+        );
+        expect(targetSelectOption.hasAttribute('selected')).toBe(true);
+    });
 });

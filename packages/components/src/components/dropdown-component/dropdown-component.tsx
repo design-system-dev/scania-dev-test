@@ -101,6 +101,22 @@ export class DropdownComponent {
                         })}
                     </ul>
                 )}
+
+                {/**
+                 * hidden select field reflecting the selected option,
+                 * to make dropdown usable in forms
+                 */}
+                <select class="hidden-select" name={headerText} disabled>
+                    <option value="">Select...</option>
+                    {this.options.map(option => (
+                        <option
+                            value={option.value}
+                            selected={option.value === this.selectedValue}
+                        >
+                            {option.label}
+                        </option>
+                    ))}
+                </select>
             </div>
         );
     }
