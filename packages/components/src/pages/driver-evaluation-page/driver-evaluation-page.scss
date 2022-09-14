@@ -45,4 +45,9 @@
 .body {
     padding: var(--space-10) 0;
     background: var(--color-gray-50);
+
+    & .stack {
+        display: grid;
+        grid-gap: var(--space-6);
+    }
 }

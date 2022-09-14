@@ -10,7 +10,7 @@ export class TableComponent {
     @Prop() headerRow!: Array<string>;
 
     /** Rows of cell contents */
-    @Prop() rows: Array<Array<string>>;
+    @Prop() rows: Array<Array<string | number>>;
 
     /**
      * 'shrink' will cause the table to shrink to the size of its

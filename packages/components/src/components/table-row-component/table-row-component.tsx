@@ -20,7 +20,7 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class TableRowComponent {
     /** Cell contents */
-    @Prop() cells!: Array<string>;
+    @Prop() cells!: Array<string | number>;
 
     /** Whether to render a header row or standard row */
     @Prop() isHeader: boolean = false;

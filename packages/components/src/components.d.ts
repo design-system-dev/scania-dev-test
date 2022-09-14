@@ -33,7 +33,7 @@ export namespace Components {
         /**
           * Rows of cell contents
          */
-        "rows": Array<Array<string>>;
+        "rows": Array<Array<string | number>>;
         /**
           * 'shrink' will cause the table to shrink to the size of its children rows, while 'full' will fill up all available space.
          */
@@ -43,7 +43,7 @@ export namespace Components {
         /**
           * Cell contents
          */
-        "cells": Array<string>;
+        "cells": Array<string | number>;
         /**
           * Whether to render a header row or standard row
          */
@@ -139,7 +139,7 @@ declare namespace LocalJSX {
         /**
           * Rows of cell contents
          */
-        "rows"?: Array<Array<string>>;
+        "rows"?: Array<Array<string | number>>;
         /**
           * 'shrink' will cause the table to shrink to the size of its children rows, while 'full' will fill up all available space.
          */
@@ -149,7 +149,7 @@ declare namespace LocalJSX {
         /**
           * Cell contents
          */
-        "cells": Array<string>;
+        "cells": Array<string | number>;
         /**
           * Whether to render a header row or standard row
          */

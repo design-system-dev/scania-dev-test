@@ -1,4 +1,5 @@
 import { Component, h, getAssetPath } from '@stencil/core';
+import driversData from './drivers.json';
 
 @Component({
     tag: 'driver-evaluation-page',
@@ -6,7 +7,18 @@ import { Component, h, getAssetPath } from '@stencil/core';
     scoped: true,
 })
 export class DriverEvaluationPage {
+    private formateDistance(distance) {
+        return `${Number(distance).toLocaleString()} km`;
+    }
+
     render() {
+        const filteredDrivers = driversData.map(item => [
+            item.driver,
+            item.company,
+            this.formateDistance(item.distance),
+            item.score,
+        ]);
+
         return (
             <main class="page">
                 <nav class="nav">
@@ -54,7 +66,17 @@ export class DriverEvaluationPage {
                                     ]}
                                 ></dropdown-component>
                             </div>
-                            <p>table</p>
+
+                            <table-component
+                                headerRow={[
+                                    'Driver',
+                                    'Company',
+                                    'Distance',
+                                    'Score',
+                                ]}
+                                rows={filteredDrivers}
+                                emptyMessage="No drivers found."
+                            ></table-component>
                         </div>
                     </div>
                 </section>

@@ -21,6 +21,7 @@
      */
     padding: var(--space-4);
     border-bottom: 1px solid var(--color-gray-100);
+    background: var(--color-white);
 
     // unset th default styles:
     display: block;
@@ -29,7 +30,8 @@
 }
 
 .header .cell {
-    background: var(--color-gray-100);
+    border-bottom-color: var(--color-blue-200);
+    background: var(--color-blue-100);
 }
 
 .standard:hover .cell {
