@@ -9,6 +9,20 @@ defineCustomElements();
 
 export const parameters = {
     theme: 'light',
+    options: {
+        storySort: {
+            order: [
+                'pages',
+                'components',
+                [
+                    'text-component',
+                    'dropdown-component',
+                    'table-row-component',
+                    'table-component',
+                ],
+            ],
+        },
+    },
 };
 
 const paddingDecorator = story =>
