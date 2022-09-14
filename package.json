@@ -12,8 +12,6 @@
         "all:dev": "yarn workspaces foreach --parallel --verbose run dev & yarn components:storybook:dev",
         "all:test": "yarn workspaces foreach run test",
         "all:test:watch": "yarn workspaces foreach run test:watch",
-        "app:build": "yarn workspace app run build",
-        "app:dev": "yarn workspace app run dev",
         "components:build": "yarn workspace components run build",
         "components:dev": "yarn workspace components run dev",
         "components:test": "yarn workspace components run test",
