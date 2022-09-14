@@ -1,11 +1,11 @@
-import { Component, Prop, State, Watch, h } from '@stencil/core';
+import { Component, Prop, State, Watch, h, getAssetPath } from '@stencil/core';
 
 /**
  * TODO:
  *
  * [x] basic component
- * [ ] styles
- * [ ] stories
+ * [x] styles
+ * [x] stories
  * [ ] tests
  * [ ] reflect in real select
  *
@@ -69,7 +69,11 @@ export class DropdownComponent {
             <div class={dropdownClasses}>
                 <button class="header" onClick={this.toggleIsOpen}>
                     <text-component size="s">{headerText}</text-component>
-                    <div class="caret">v</div>
+                    <img
+                        class="caret"
+                        src={getAssetPath('./chevron-down.svg')}
+                        alt="chevron"
+                    />
                 </button>
 
                 {this.isOpen && (
