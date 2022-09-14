@@ -9,6 +9,7 @@ defineCustomElements();
 
 export const parameters = {
     theme: 'light',
+    padding: '1rem',
     options: {
         storySort: {
             order: [
@@ -25,8 +26,10 @@ export const parameters = {
     },
 };
 
-const paddingDecorator = story =>
-    html`<div style="padding: 1rem;">${story()}</div>`;
+const paddingDecorator = (story, context) =>
+    html`<div style="padding: ${context?.parameters?.padding || 0} ;">
+        ${story()}
+    </div>`;
 
 const themeDecorator = (story, context) => html` <div
     style=${styleMap({
