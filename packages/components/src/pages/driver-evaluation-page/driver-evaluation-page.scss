@@ -46,8 +46,31 @@
     padding: var(--space-10) 0;
     background: var(--color-gray-50);
 
-    & .stack {
+    .stack {
         display: grid;
         grid-gap: var(--space-6);
+    }
+
+    .dropdown-ctn {
+        display: flex;
+        gap: var(--space-6);
+        align-items: center;
+
+        & > :first-child {
+            flex-basis: 13rem;
+        }
+    }
+
+    .reset {
+        // reset button styles
+        cursor: pointer;
+        appearance: none;
+        border: none;
+        background: none;
+        padding: 0;
+        text-align: left;
+        color: inherit;
+        font-size: inherit;
+        text-decoration: inherit;
     }
 }

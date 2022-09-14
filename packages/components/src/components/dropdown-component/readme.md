@@ -20,6 +20,19 @@
 | `dropdownChanged` | Emitts new value whenever an option is selected | `CustomEvent<any>` |
 
 
+## Methods
+
+### `reset() => Promise<void>`
+
+Resets dropdown
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Dependencies
 
 ### Used by

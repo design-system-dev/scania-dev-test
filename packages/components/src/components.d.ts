@@ -20,6 +20,10 @@ export namespace Components {
         label: string;
         value: string;
     }[];
+        /**
+          * Resets dropdown
+         */
+        "reset": () => Promise<void>;
     }
     interface TableComponent {
         /**

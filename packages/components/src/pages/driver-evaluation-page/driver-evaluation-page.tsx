@@ -18,7 +18,7 @@ export class DriverEvaluationPage {
 
     @State() formattedDrivers = this.formateDrivers(this.filteredDrivers);
 
-    @State() selectedFilter: string;
+    @State() selectedFilter: string | undefined;
 
     @Listen('dropdownChanged')
     dropdownChangedHandler({ detail: selectedFilter }) {
@@ -26,8 +26,12 @@ export class DriverEvaluationPage {
     }
 
     @Watch('selectedFilter')
-    watchselectedFilterHandler() {
+    watchselectedFilterHandler(newValue) {
         this.filterDriversByDistance();
+        if (newValue === undefined) {
+            // @ts-ignore: public method
+            document.querySelector('dropdown-component').reset();
+        }
     }
 
     @Watch('filteredDrivers')
@@ -36,6 +40,10 @@ export class DriverEvaluationPage {
     }
 
     private filterDriversByDistance = () => {
+        if (this.selectedFilter === undefined) {
+            this.filteredDrivers = driversData;
+            return;
+        }
         const longDrivers = driversData.filter(item => item.distance > 200000);
         this.filteredDrivers =
             this.selectedFilter === 'long'
@@ -55,6 +63,10 @@ export class DriverEvaluationPage {
     private formateDistance(distance) {
         return `${Number(distance).toLocaleString()} km`;
     }
+
+    private reset = () => {
+        this.selectedFilter = undefined;
+    };
 
     render() {
         return (
@@ -90,7 +102,7 @@ export class DriverEvaluationPage {
                 <section class="body grow-section">
                     <div class="container">
                         <div class="stack">
-                            <div>
+                            <div class="dropdown-ctn">
                                 <dropdown-component
                                     options={[
                                         {
@@ -103,6 +115,12 @@ export class DriverEvaluationPage {
                                         },
                                     ]}
                                 ></dropdown-component>
+
+                                <text-component tag="div" appearance="link">
+                                    <button class="reset" onClick={this.reset}>
+                                        Reset
+                                    </button>
+                                </text-component>
                             </div>
 
                             <table-component

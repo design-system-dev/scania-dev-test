@@ -3,6 +3,7 @@ import {
     Prop,
     State,
     Watch,
+    Method,
     Event,
     EventEmitter,
     h,
@@ -27,7 +28,7 @@ export class DropdownComponent {
     /** Emitts new value whenever an option is selected */
     @Event() dropdownChanged: EventEmitter;
 
-    @State() selectedValue: string;
+    @State() selectedValue: string | undefined;
 
     @State() selectedLabel: string = '';
 
@@ -37,6 +38,12 @@ export class DropdownComponent {
     watchStateHandler(newValue: string) {
         this.selectedLabel = this.getOptionLabelByValue(newValue);
         this.dropdownChanged.emit(this.selectedValue);
+    }
+
+    /** Resets dropdown */
+    @Method()
+    async reset() {
+        this.selectedValue = undefined;
     }
 
     private toggleIsOpen = () => {
