@@ -2,9 +2,6 @@
 import { createElement as h } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import * as x from 'ui-components-react';
-
-console.log(x);
 
 function App() {
     return (
@@ -27,13 +24,13 @@ function App() {
                     options={[{ label: 'A', value: 'a' }]}
                 ></DropdownComponent> */}
 
-                {/* <text-component>Hello World!</text-component>
+                <text-component>Hello World!</text-component>
                 <dropdown-component
                     options={[
                         { label: 'A', value: 'a' },
                         { label: 'B', value: 'b' },
                     ]}
-                ></dropdown-component> */}
+                ></dropdown-component>
             </header>
         </div>
     );

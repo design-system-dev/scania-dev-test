@@ -1,8 +1,0 @@
-{
-    "name": "ui-components-react",
-    "version": "1.0.0",
-    "main": "dist/index.ts",
-    "files": [
-        "dist/"
-    ]
-}

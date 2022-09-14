@@ -95,7 +95,7 @@ export class DropdownComponent {
                  * hidden select field reflecting the selected option,
                  * to make dropdown usable in forms
                  */}
-                {/* <select class="hidden-select" name={headerText} disabled>
+                <select class="hidden-select" name={headerText} disabled>
                     <option value="">Select...</option>
                     {this.options.map(option => (
                         <option
@@ -105,7 +105,7 @@ export class DropdownComponent {
                             {option.label}
                         </option>
                     ))}
-                </select> */}
+                </select>
             </div>
         );
     }
