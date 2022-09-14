@@ -1,9 +1,9 @@
 import { Story, Meta } from '@storybook/web-components';
-import { Components } from '../../../loader';
+import { Components } from '../../../dist/loader';
 import { html } from 'lit-html';
 
 export default {
-    title: 'dropdown-component',
+    title: 'components/dropdown-component',
 } as Meta;
 
 const Template: Story<Components.DropdownComponent> = ({ options, heading }) =>

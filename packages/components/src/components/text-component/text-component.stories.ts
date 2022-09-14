@@ -1,9 +1,9 @@
 import { Story, Meta } from '@storybook/web-components';
-import { Components } from '../../../loader';
+import { Components } from '../../../dist/loader';
 import { html } from 'lit-html';
 
 export default {
-    title: 'text-component',
+    title: 'components/text-component',
     argTypes: {
         size: {
             control: { type: 'select', options: ['s', 'm', 'l'] },

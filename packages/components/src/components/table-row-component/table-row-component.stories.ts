@@ -1,9 +1,9 @@
 import { Story, Meta } from '@storybook/web-components';
-import { Components } from '../../../loader';
+import { Components } from '../../../dist/loader';
 import { html } from 'lit-html';
 
 export default {
-    title: 'table-row-component',
+    title: 'components/table-row-component',
     argTypes: {
         size: { control: { type: 'select', options: ['shrink', 'full'] } },
     },

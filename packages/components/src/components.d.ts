@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface DriverEvaluationPage {
+    }
     interface DropdownComponent {
         /**
           * Title
@@ -71,6 +73,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLDriverEvaluationPageElement extends Components.DriverEvaluationPage, HTMLStencilElement {
+    }
+    var HTMLDriverEvaluationPageElement: {
+        prototype: HTMLDriverEvaluationPageElement;
+        new (): HTMLDriverEvaluationPageElement;
+    };
     interface HTMLDropdownComponentElement extends Components.DropdownComponent, HTMLStencilElement {
     }
     var HTMLDropdownComponentElement: {
@@ -96,6 +104,7 @@ declare global {
         new (): HTMLTextComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "driver-evaluation-page": HTMLDriverEvaluationPageElement;
         "dropdown-component": HTMLDropdownComponentElement;
         "table-component": HTMLTableComponentElement;
         "table-row-component": HTMLTableRowComponentElement;
@@ -103,6 +112,8 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface DriverEvaluationPage {
+    }
     interface DropdownComponent {
         /**
           * Title
@@ -167,6 +178,7 @@ declare namespace LocalJSX {
         "theme"?: 'dark' | 'light';
     }
     interface IntrinsicElements {
+        "driver-evaluation-page": DriverEvaluationPage;
         "dropdown-component": DropdownComponent;
         "table-component": TableComponent;
         "table-row-component": TableRowComponent;
@@ -177,6 +189,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "driver-evaluation-page": LocalJSX.DriverEvaluationPage & JSXBase.HTMLAttributes<HTMLDriverEvaluationPageElement>;
             "dropdown-component": LocalJSX.DropdownComponent & JSXBase.HTMLAttributes<HTMLDropdownComponentElement>;
             "table-component": LocalJSX.TableComponent & JSXBase.HTMLAttributes<HTMLTableComponentElement>;
             "table-row-component": LocalJSX.TableRowComponent & JSXBase.HTMLAttributes<HTMLTableRowComponentElement>;
