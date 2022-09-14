@@ -10,11 +10,14 @@
 ### Depends on
 
 - [text-component](../../components/text-component)
+- [dropdown-component](../../components/dropdown-component)
 
 ### Graph
 ```mermaid
 graph TD;
   driver-evaluation-page --> text-component
+  driver-evaluation-page --> dropdown-component
+  dropdown-component --> text-component
   style driver-evaluation-page fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

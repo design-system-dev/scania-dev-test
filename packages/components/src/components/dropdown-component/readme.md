@@ -15,6 +15,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [driver-evaluation-page](../../pages/driver-evaluation-page)
+
 ### Depends on
 
 - [text-component](../text-component)
@@ -23,6 +27,7 @@
 ```mermaid
 graph TD;
   dropdown-component --> text-component
+  driver-evaluation-page --> dropdown-component
   style dropdown-component fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

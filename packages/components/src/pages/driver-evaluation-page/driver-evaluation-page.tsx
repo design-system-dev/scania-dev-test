@@ -40,7 +40,20 @@ export class DriverEvaluationPage {
                 <section class="body grow-section">
                     <div class="container">
                         <div class="stack">
-                            <p>drop</p>
+                            <div>
+                                <dropdown-component
+                                    options={[
+                                        {
+                                            label: '<= 200.000 km',
+                                            value: 'short',
+                                        },
+                                        {
+                                            label: '> 200.000 km',
+                                            value: 'long',
+                                        },
+                                    ]}
+                                ></dropdown-component>
+                            </div>
                             <p>table</p>
                         </div>
                     </div>
