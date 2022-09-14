@@ -10,11 +10,11 @@
         "components": "1.0.0",
         "design-tokens": "1.0.0",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "ui-components-react": "1.0.0"
     },
     "devDependencies": {
-        "react-scripts": "5.0.1",
-        "web-vitals": "^2.1.4"
+        "react-scripts": "5.0.1"
     },
     "scripts": {
         "dev": "DISABLE_ESLINT_PLUGIN=true react-scripts start",

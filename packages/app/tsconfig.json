@@ -1,9 +1,8 @@
 {
     "extends": "../../tsconfig.json",
     "include": ["src"],
-    "exclude": ["node_modules"],
+    "exclude": ["node_modules", "../ui-components-react"],
     "compilerOptions": {
-        "jsx": "react",
-        "jsxFactory": "h"
+        "jsx": "preserve"
     }
 }
