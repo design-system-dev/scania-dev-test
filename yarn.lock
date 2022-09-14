@@ -2569,6 +2569,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stencil/react-output-target@npm:^0.3.1":
+  version: 0.3.1
+  resolution: "@stencil/react-output-target@npm:0.3.1"
+  peerDependencies:
+    "@stencil/core": ^2.9.0
+  checksum: fe311ba81f79119598524ceedf7125ff77bba22999b7394de774231262e5b7be28d5c46f6e05df1cde8947e24b03ccac797aa725738aa7bb6912536277b61d79
+  languageName: node
+  linkType: hard
+
 "@stencil/sass@npm:^1.5.2":
   version: 1.5.2
   resolution: "@stencil/sass@npm:1.5.2"
@@ -4046,7 +4055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^27.0.3":
+"@types/jest@npm:^27.0.3, @types/jest@npm:^27.5.2":
   version: 27.5.2
   resolution: "@types/jest@npm:27.5.2"
   dependencies:
@@ -4117,7 +4126,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^14.0.10 || ^16.0.0, @types/node@npm:^14.14.20 || ^16.0.0":
+"@types/node@npm:^14.0.10 || ^16.0.0, @types/node@npm:^14.14.20 || ^16.0.0, @types/node@npm:^16.11.59":
   version: 16.11.59
   resolution: "@types/node@npm:16.11.59"
   checksum: b3a2986ef8f8216bb7fd1187dcf2e69aca3e6b6b5fdfd6abf4cf11c44e3cdd587fae875a28dc4ef257e2b369e2c5290642aff6a0a9d702f3385a78f561293259
@@ -4194,7 +4203,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.0.19":
+"@types/react-dom@npm:^18.0.6":
+  version: 18.0.6
+  resolution: "@types/react-dom@npm:18.0.6"
+  dependencies:
+    "@types/react": "*"
+  checksum: db571047af1a567631758700b9f7d143e566df939cfe5fbf7535347cc0c726a1cdbb5e3f8566d076e54cf708b6c1166689de194a9ba09ee35efc9e1d45911685
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:*, @types/react@npm:^18.0.19, @types/react@npm:^18.0.20":
   version: 18.0.20
   resolution: "@types/react@npm:18.0.20"
   dependencies:
@@ -5324,6 +5342,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "app@workspace:packages/app"
   dependencies:
+    "@types/jest": ^27.5.2
+    "@types/node": ^16.11.59
+    "@types/react": ^18.0.20
+    "@types/react-dom": ^18.0.6
+    components: 1.0.0
+    design-tokens: 1.0.0
     react: ^18.2.0
     react-dom: ^18.2.0
     react-scripts: 5.0.1
@@ -6981,13 +7005,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"components@workspace:packages/components":
+"components@1.0.0, components@workspace:packages/components":
   version: 0.0.0-use.local
   resolution: "components@workspace:packages/components"
   dependencies:
     "@babel/core": ^7.19.0
     "@mdx-js/react": ^1.6.22
     "@stencil/core": ^2.13.0
+    "@stencil/react-output-target": ^0.3.1
     "@stencil/sass": ^1.5.2
     "@storybook/addon-actions": ^6.5.10
     "@storybook/addon-docs": ^6.5.10
@@ -6998,6 +7023,7 @@ __metadata:
     "@storybook/web-components": ^6.5.10
     "@types/jest": ^27.0.3
     babel-loader: ^8.2.5
+    design-tokens: 1.0.0
     jest: ^27.4.5
     jest-cli: ^27.4.5
     lit-html: ^2.3.1
@@ -7850,7 +7876,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"design-tokens@workspace:packages/design-tokens":
+"design-tokens@1.0.0, design-tokens@workspace:packages/design-tokens":
   version: 0.0.0-use.local
   resolution: "design-tokens@workspace:packages/design-tokens"
   dependencies:
@@ -16576,6 +16602,7 @@ __metadata:
   dependencies:
     "@stencil/eslint-plugin": ^0.4.0
     "@types/react": ^18.0.19
+    "@types/react-dom": ^18.0.6
     "@typescript-eslint/eslint-plugin": ^4
     "@typescript-eslint/parser": ^4
     eslint: ^7
