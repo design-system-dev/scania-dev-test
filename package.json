@@ -22,7 +22,7 @@
         "design-tokens:dev": "yarn workspace design-tokens run dev",
         "eslint:check": "eslint . --ext .js,.ts,.tsx --ignore-path .gitignore",
         "eslint:fix": "yarn eslint:check --fix",
-        "prettier:check": "prettier --ignore-path .gitignore .",
+        "prettier:check": "prettier --ignore-path .gitignore **/*.{js,ts,tsx}",
         "prettier:fix": "prettier --write --ignore-path .gitignore **/*.{js,ts,tsx}"
     },
     "repository": {
