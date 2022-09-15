@@ -22,7 +22,9 @@ export class DriverEvaluationPage {
 
     @Listen('dropdownChanged')
     dropdownChangedHandler({ detail: selectedFilter }) {
-        this.selectedFilter = selectedFilter;
+        if (selectedFilter != null) {
+            this.selectedFilter = selectedFilter;
+        }
     }
 
     @Watch('selectedFilter')
