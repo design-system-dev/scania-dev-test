@@ -2,16 +2,16 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Dependencies
 
 ### Depends on
 
--   [text-component](../../components/text-component)
--   [dropdown-component](../../components/dropdown-component)
--   [table-component](../../components/table-component)
+- [text-component](../../components/text-component)
+- [dropdown-component](../../components/dropdown-component)
+- [table-component](../../components/table-component)
 
 ### Graph
-
 ```mermaid
 graph TD;
   driver-evaluation-page --> text-component
@@ -23,6 +23,6 @@ graph TD;
   style driver-evaluation-page fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

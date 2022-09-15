@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property             | Attribute   | Description                                                                                                                                              | Type                   | Default     |
@@ -10,18 +11,18 @@
 | `isHeader`           | `is-header` | Whether to render a header row or standard row                                                                                                           | `boolean`              | `false`     |
 | `size`               | `size`      | 'shrink' will cause each cell to take a fixed value, while 'full' will cause the row to fill up all available space, distributing it evenly among cells. | `"full" \| "shrink"`   | `'shrink'`  |
 
+
 ## Dependencies
 
 ### Used by
 
--   [table-component](../table-component)
+ - [table-component](../table-component)
 
 ### Depends on
 
--   [text-component](../text-component)
+- [text-component](../text-component)
 
 ### Graph
-
 ```mermaid
 graph TD;
   table-row-component --> text-component
@@ -29,6 +30,6 @@ graph TD;
   style table-row-component fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*
