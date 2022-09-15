@@ -1,9 +1,6 @@
 # text-component
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -14,16 +11,16 @@
 | `tag`        | `tag`        | HTML tag to render as                           | `string`                           | `'p'`         |
 | `theme`      | `theme`      | Whether the text will have dark or light colors | `"dark" \| "light"`                | `'dark'`      |
 
-
 ## Dependencies
 
 ### Used by
 
- - [driver-evaluation-page](../../pages/driver-evaluation-page)
- - [dropdown-component](../dropdown-component)
- - [table-row-component](../table-row-component)
+-   [driver-evaluation-page](../../pages/driver-evaluation-page)
+-   [dropdown-component](../dropdown-component)
+-   [table-row-component](../table-row-component)
 
 ### Graph
+
 ```mermaid
 graph TD;
   driver-evaluation-page --> text-component
@@ -32,6 +29,6 @@ graph TD;
   style text-component fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
-----------------------------------------------
+---
 
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

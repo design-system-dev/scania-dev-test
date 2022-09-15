@@ -1,9 +1,6 @@
 # table-row-component
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -14,18 +11,18 @@
 | `rows`                   | --              | Rows of cell contents                                                                                                    | `(string \| number)[][]` | `undefined`           |
 | `size`                   | `size`          | 'shrink' will cause the table to shrink to the size of its children rows, while 'full' will fill up all available space. | `"full" \| "shrink"`     | `'shrink'`            |
 
-
 ## Dependencies
 
 ### Used by
 
- - [driver-evaluation-page](../../pages/driver-evaluation-page)
+-   [driver-evaluation-page](../../pages/driver-evaluation-page)
 
 ### Depends on
 
-- [table-row-component](../table-row-component)
+-   [table-row-component](../table-row-component)
 
 ### Graph
+
 ```mermaid
 graph TD;
   table-component --> table-row-component
@@ -34,6 +31,6 @@ graph TD;
   style table-component fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
-----------------------------------------------
+---
 
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
